@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text, View,StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
 const Home =({navigation} : any) => {
@@ -9,9 +9,14 @@ const Home =({navigation} : any) => {
         onPress={() => {
           navigation.navigate('Notification');
         }}>
-        <Text>home screen</Text>
+        <Text style={style.text}>home screen</Text>
       </TouchableOpacity>
     </View>
   );
 };
+const style : any = StyleSheet.create({
+text:{
+  fontFamily:'Poppins-Bold'
+}
+})
 export default Home;
