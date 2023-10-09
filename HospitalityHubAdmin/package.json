@@ -11,6 +11,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@react-navigation/bottom-tabs": "^6.5.9",
     "@react-navigation/drawer": "^6.6.4",
     "@react-navigation/material-bottom-tabs": "^6.2.17",
@@ -27,6 +28,14 @@
     "react-native-screens": "^3.25.0",
     "react-native-tab-view": "^3.5.2",
     "react-native-vector-icons": "^10.0.0"
+=======
+    "@reduxjs/toolkit": "^1.9.7",
+    "react": "18.2.0",
+    "react-native": "0.72.5",
+    "react-redux": "^8.1.3",
+    "redux": "^4.2.1",
+    "redux-thunk": "^2.4.2"
+>>>>>>> 37ee2290edcac5a6e05c4f28fefffec7d307896e
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
