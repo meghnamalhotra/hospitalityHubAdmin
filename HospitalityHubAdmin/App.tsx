@@ -6,9 +6,12 @@
  */
 
 import React from 'react';
-import MainScreen from './source/screens/MainScreen';
+import StackNavigation from './source/navigation/StackNavigation';
+
 const App = () => {
-  return <MainScreen />;
+  return (
+    <StackNavigation/>
+  );
 };
 
 export default App;
