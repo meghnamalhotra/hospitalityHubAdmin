@@ -19,7 +19,7 @@ import { Separator, Button} from '../components';
 const Register = () => {
   const navigation = useNavigation<any>();
   const handlePress = () => {
-    navigation.navigate('Notification');
+    navigation.navigate('SetLocation');
   };
 
   return (
