@@ -1,27 +1,34 @@
 import React from 'react';
 import {Text, View} from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { StyleSheet } from 'react-native';
-import { Colors } from '../theme/colors';
-import { Location } from '../assets/svgs';
-const SetLocation = ({navigation} : any) => {
-  return ( 
+import {TouchableOpacity} from 'react-native-gesture-handler';
+import {SafeAreaView} from 'react-native-safe-area-context';
+import {StyleSheet} from 'react-native';
+import {Colors} from '../theme/colors';
+import {Location} from '../assets/svgs';
+const SetLocation = ({navigation}: any) => {
+  return (
     <SafeAreaView style={styles.container}>
       <View style={styles.icon}>
         <View style={styles.circle}>
-        <Location style={styles.loc}/>
+          <Location style={styles.loc} />
         </View>
-        
       </View>
       <Text style={styles.text}>Enable location</Text>
       <Text style={styles.text2}>You need to enable loaction to </Text>
       <Text style={styles.text3}>browse stays near you </Text>
-      <TouchableOpacity style={styles.bt} onPress={()=>{navigation.navigate('Profile')}}>
-         <Text style={styles.btn}>Allow Location</Text>
+      <TouchableOpacity
+        style={styles.bt}
+        onPress={() => {
+          navigation.navigate('Amenities');
+        }}>
+        <Text style={styles.btn}>Allow Location</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.bt1} onPress={()=>{navigation.navigate('Profile')}}>
-         <Text>Enter Manually</Text>
+      <TouchableOpacity
+        style={styles.bt1}
+        onPress={() => {
+          navigation.navigate('ProfiAmenitiesle');
+        }}>
+        <Text>Enter Manually</Text>
       </TouchableOpacity>
     </SafeAreaView>
   );
@@ -29,7 +36,7 @@ const SetLocation = ({navigation} : any) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:Colors.backgroundColor,
+    backgroundColor: Colors.backgroundColor,
   },
   icon: {
     flexDirection: 'row',
@@ -40,14 +47,14 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignSelf: 'center',
-    backgroundColor:'lightblue',
-    borderRadius:100,
-    width:'22%',
+    backgroundColor: 'lightblue',
+    borderRadius: 100,
+    width: '22%',
     height: '30%',
     marginTop: '50%',
   },
   loc: {
-   marginTop: '10%',
+    marginTop: '10%',
   },
   text: {
     marginTop: '10%',
@@ -110,7 +117,7 @@ const styles = StyleSheet.create({
     activeOpacity: 0.7,
   },
   btn: {
-    color:Colors.white,
+    color: Colors.white,
   },
-})
+});
 export default SetLocation;
