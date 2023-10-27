@@ -1,4 +1,6 @@
 import HotelView from './hotelView.svg';
 import FbSVG from './fbIcon.svg';
 import GoogleSVG from './googleIcon.svg';
-export {HotelView, FbSVG, GoogleSVG};
+import ClickCheckBox from './ClickCheckBox.svg'
+import BlackCheckBox from './BlankCheckBox.svg'
+export {HotelView, FbSVG, GoogleSVG,ClickCheckBox,BlackCheckBox};
