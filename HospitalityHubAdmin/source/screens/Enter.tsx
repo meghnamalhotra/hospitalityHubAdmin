@@ -8,7 +8,7 @@ import { Button } from '../components';
 const Enter = () => {
     const navigation = useNavigation<any>();
     const handlePress = () => {
-        navigation.navigate('Notification');
+        navigation.navigate('Login');
       };
     return (
         <SafeAreaView style={styles.main}>
