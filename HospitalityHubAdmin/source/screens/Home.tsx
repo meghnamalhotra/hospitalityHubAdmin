@@ -7,7 +7,7 @@ const Home =({navigation} : any) => {
     <View>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('Notification');
+          navigation.navigate('SetLocation');
         }}>
         <Text style={style.text}>home screen</Text>
       </TouchableOpacity>

@@ -1,9 +1,7 @@
-<<<<<<< Updated upstream
+
 import React, { useState } from 'react';
 import { useColorScheme } from 'react-native';
-=======
-import React, {useState} from 'react';
->>>>>>> Stashed changes
+
 import CheckBox from '@react-native-community/checkbox';
 import { Colors } from '../theme/colors';
 
