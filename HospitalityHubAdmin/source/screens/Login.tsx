@@ -19,7 +19,7 @@ import { Separator, Button} from '../components';
 const Login= () => {
   const navigation = useNavigation<any>();
   const handlePress = () => {
-    navigation.navigate('Verification');
+    navigation.navigate('Notification');
   };
 
   return (
@@ -32,7 +32,7 @@ const Login= () => {
             <View style={styles.leftHeader}>
                 <FadeCircle />
             </View>
-            <View style={styles.rightHeader}>
+            <View>
                 <FillCircle />
             </View>
             </View> 
