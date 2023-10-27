@@ -12,11 +12,11 @@ import {
   Platform,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import { HotelView, FbSVG, GoogleSVG } from '../assets/svgs';
+import { HotelView, FbSVG, GoogleSVG, FadeCircle, FillCircle } from '../assets/svgs';
 import { Colors } from '../theme/colors';
 import { Separator, Button} from '../components';
 
-const Register = () => {
+const Login= () => {
   const navigation = useNavigation<any>();
   const handlePress = () => {
     navigation.navigate('Verification');
@@ -28,26 +28,23 @@ const Register = () => {
       style={styles.main}>
       <SafeAreaView style={styles.main}>
         <ScrollView style={styles.titleText}>
-          <HotelView
-            height={
-              Dimensions.get('screen').height > 700
-                ? Dimensions.get('screen').height * 0.34
-                : Dimensions.get('screen').height * 0.4
-            }
-            style={styles.svg}
-          />
-          <Text style={styles.heading}>
-            Handle your Hotel, {'\n'}skip the hassles!
-          </Text>
+            <View style={styles.headerContainer}>
+            <View style={styles.leftHeader}>
+                <FadeCircle />
+            </View>
+            <View style={styles.rightHeader}>
+                <FillCircle />
+            </View>
+            </View> 
           <View style={styles.subtext}>
             <Separator
-              width={'15%'}
+              width={'30%'}
               height={'4%'}
               backgroundColor={Colors.borderGray}
             />
-            <Text style={styles.subheading}>Log in or sign up</Text>
+            <Text style={styles.subheading}>Log in</Text>
             <Separator
-              width={'15%'}
+              width={'30%'}
               height={'4%'}
               backgroundColor={Colors.borderGray}
             />
@@ -56,6 +53,15 @@ const Register = () => {
             <View style={styles.inputBox}>
               <TextInput
                 placeholder="Enter Email"
+                style={styles.inputText}
+                placeholderTextColor={Colors.lightgray}
+              />
+            </View>
+          </View>
+          <View style={styles.inputBoxContainer}>
+            <View style={styles.inputBox}>
+              <TextInput
+                placeholder="Enter Password"
                 style={styles.inputText}
                 placeholderTextColor={Colors.lightgray}
               />
@@ -114,6 +120,14 @@ const styles = StyleSheet.create({
   titleText: {
     flex: 1,
   },
+  headerContainer: {
+    flexDirection: 'row',
+    top: -Dimensions.get('screen').height * 0.1,
+    marginBottom: '-15%',
+  },
+  leftHeader: {
+    flex: 3,
+  },
   heading: {
     color: Colors.black,
     marginTop: '4%',
@@ -145,7 +159,7 @@ const styles = StyleSheet.create({
     width: '80%',
     height: '100%',
     borderWidth: 0.5,
-    borderRadius: 5,
+    borderRadius: 10,
     paddingHorizontal: 5,
     alignItems: 'center',
     borderColor: Colors.borderGray,
@@ -209,4 +223,4 @@ const styles = StyleSheet.create({
     textDecorationLine: 'underline',
   },
 });
-export default Register;
+export default Login;
