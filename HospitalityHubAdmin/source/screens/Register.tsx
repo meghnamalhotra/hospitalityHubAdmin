@@ -138,6 +138,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: '2%',
+    height: Dimensions.get('screen').height > 700 ? Dimensions.get('screen').height * 0.06 : Dimensions.get('screen').height * 0.07,
   },
   inputBox: {
     flexDirection: 'row',
@@ -197,9 +198,9 @@ const styles = StyleSheet.create({
   socialButton: {
     height:
       Dimensions.get('screen').height > 700
-        ? Dimensions.get('screen').height * 0.07
-        : Dimensions.get('screen').height * 0.09,
-    width: '42%',
+        ? Dimensions.get('screen').height * 0.056
+        : Dimensions.get('screen').height * 0.07,
+    width: '35%',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.white,
