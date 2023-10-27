@@ -12,6 +12,7 @@ import Verification from '../screens/Verification';
 import Enter from '../screens/Enter';
 import Login from '../screens/Login';
 import SetLocation from '../screens/SetLocation';
+import Amenities from '../screens/Amenities';
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
@@ -23,8 +24,9 @@ const StackNavigation = () => {
           <Stack.Screen name="Enter" component={Enter} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="SetLocation" component={SetLocation} />
+          <Stack.Screen name="Amenities" component={Amenities} />
           <Stack.Screen name="Profile" component={Profile} />
-          <Stack.Screen name ="LikeList" component={LikeList}/>
+          <Stack.Screen name="LikeList" component={LikeList} />
           <Stack.Screen name="Setting" component={Setting} />
           <Stack.Screen name="TabNavigation" component={TabNavigator} />
         </Stack.Navigator>
