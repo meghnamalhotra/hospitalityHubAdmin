@@ -1,13 +1,13 @@
 import React from 'react';
-import {Text, View,TouchableOpacity} from 'react-native';
+import {Text, View,TouchableOpacity, SafeAreaView} from 'react-native';
 
 const Profile = ({navigation} : any) => {
   return (
-    <View>
-     <TouchableOpacity onPress={()=>{navigation.navigate('Setting')}}>
+    <SafeAreaView>
+     <TouchableOpacity onPress={()=>{navigation.navigate('LikeList')}}>
       <Text>Profile</Text>
       </TouchableOpacity>
-    </View>
+    </SafeAreaView>
   );
 };
 export default Profile;
