@@ -7,4 +7,5 @@ import ClickCheckBox from './ClickCheckBox.svg'
 import BlackCheckBox from './BlankCheckBox.svg'
 import FadeCircle from './fadeEllipse.svg';
 import FillCircle from './fillElipse.svg';
-export {HotelView, FbSVG, GoogleSVG,ClickCheckBox,BlackCheckBox, PhoneImage, EnterImage, FillCircle, FadeCircle};
+import Location from './location.svg'
+export {HotelView, FbSVG, GoogleSVG,ClickCheckBox,BlackCheckBox, PhoneImage, EnterImage, FillCircle, FadeCircle, Location};
