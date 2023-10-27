@@ -7,13 +7,14 @@ import Notification from '../screens/Notification';
 import Profile from '../screens/Profile';
 import Setting from '../screens/Setting';
 import TabNavigator from './TabNavigation';
+import Register from '../screens/Register';
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
     <SafeAreaView style={{flex: 1}}>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Register" component={Register} />
           <Stack.Screen name="Notification" component={Notification} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="Setting" component={Setting} />
