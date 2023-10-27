@@ -13,7 +13,7 @@ const Checkbox = () => {
     <CheckBox
       boxType="square"
       tintColors={{ true: checkboxColor, false: checkboxColor }} 
-      onTintColor={borderColor} //for ios
+      onTintColor={borderColor} 
       onFillColor={borderColor} 
       disabled={false}
       value={toggleCheckBox}
