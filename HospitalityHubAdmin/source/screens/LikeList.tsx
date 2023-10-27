@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from 'react-native';
 import {Colors} from '../theme/colors';
-import {Button} from '../components';
+import {Button, Checkbox} from '../components';
 import {BlackCheckBox} from '../assets/svgs';
 
 const Likelist = ({navigation}: any) => {
@@ -47,13 +47,13 @@ const Likelist = ({navigation}: any) => {
           </View>
           <View style={styles.checkBoxContainer}>
             <TouchableOpacity>
-              <BlackCheckBox />
+             <Checkbox/>
             </TouchableOpacity>
             <Text style={styles.checkboxTxt}>Entire Property</Text>
           </View>
           <View style={styles.checkBoxContainer}>
             <TouchableOpacity>
-              <BlackCheckBox />
+            <Checkbox/>
             </TouchableOpacity>
             <Text style={styles.checkboxTxt}>Private Property</Text>
           </View>
@@ -94,7 +94,8 @@ const styles = StyleSheet.create({
   checkboxTxt: {
     marginHorizontal: 20,
     fontWeight: '500',
-    color:Colors.black
+     color:Colors.black,
+     fontSize:17,
   },
 });
 export default Likelist;
