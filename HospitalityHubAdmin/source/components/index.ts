@@ -1,3 +1,4 @@
 import Separator from './Separator';
 import Button from './Button';
-export {Separator, Button};
+import Checkbox from './CheckBox';
+export {Separator, Button,Checkbox};
