@@ -8,6 +8,8 @@ import Setting from '../screens/Setting';
 import TabNavigator from './TabNavigation';
 import Register from '../screens/Register';
 import LikeList from '../screens/LikeList';
+import Verification from '../screens/Verification';
+import Enter from '../screens/Enter';
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
@@ -15,6 +17,8 @@ const StackNavigation = () => {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="Register" component={Register} />
+          <Stack.Screen name="Verification" component={Verification} />
+          <Stack.Screen name="Enter" component={Enter} />
           <Stack.Screen name="Notification" component={Notification} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name ="LikeList" component={LikeList}/>
