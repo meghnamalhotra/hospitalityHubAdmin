@@ -3,4 +3,6 @@ import FbSVG from './fbIcon.svg';
 import GoogleSVG from './googleIcon.svg';
 import PhoneImage from './phoneImage.svg';
 import EnterImage from './enterImage.svg';
-export {HotelView, FbSVG, GoogleSVG, PhoneImage, EnterImage};
+import ClickCheckBox from './ClickCheckBox.svg'
+import BlackCheckBox from './BlankCheckBox.svg'
+export {HotelView, FbSVG, GoogleSVG,ClickCheckBox,BlackCheckBox, PhoneImage, EnterImage};
