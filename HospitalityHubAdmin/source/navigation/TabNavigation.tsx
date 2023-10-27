@@ -3,11 +3,18 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Text, View} from 'react-native';
 import Home from '../screens/Home';
 import Notification from '../screens/Notification';
-
+import SetLocation from '../screens/SetLocation';
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
   return (
     <Tab.Navigator>
+      <Tab.Screen
+        name="SetLocation"
+        component={SetLocation}
+        options={{
+          headerShown: false,
+        }}
+      />
       <Tab.Screen
         name="Home"
         component={Home}
