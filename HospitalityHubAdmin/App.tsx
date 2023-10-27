@@ -9,7 +9,7 @@ import React from 'react';
 import StackNavigation from './source/navigation/StackNavigation';
 
 const App = () => {
-  return (
+  return  (
     <StackNavigation/>
   );
 };

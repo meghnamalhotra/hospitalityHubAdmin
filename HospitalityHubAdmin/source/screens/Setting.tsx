@@ -4,7 +4,7 @@ import {Text, View,TouchableOpacity} from 'react-native';
 const Setting = ({navigation} : any) => {
   return (
     <View>
-      <TouchableOpacity onPress={()=>{navigation.navigate('Home')}}>
+      <TouchableOpacity onPress={()=>{navigation.navigate('TabNavigation')}}>
       <Text>Setting</Text>
       </TouchableOpacity>
     </View>

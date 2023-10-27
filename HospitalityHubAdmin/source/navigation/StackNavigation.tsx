@@ -6,6 +6,7 @@ import Home from '../screens/Home';
 import Notification from '../screens/Notification';
 import Profile from '../screens/Profile';
 import Setting from '../screens/Setting';
+import TabNavigator from './TabNavigation';
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
@@ -16,6 +17,7 @@ const StackNavigation = () => {
           <Stack.Screen name="Notification" component={Notification} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="Setting" component={Setting} />
+          <Stack.Screen name="TabNavigation" component={TabNavigator} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
