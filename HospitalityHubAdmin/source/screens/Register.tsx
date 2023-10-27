@@ -37,7 +37,7 @@ const Register = () => {
             style={styles.svg}
           />
           <Text style={styles.heading}>
-            Navigate the World, {'\n'}Book Your Bliss
+            Handle your Hotel, {'\n'}skip the hassles!
           </Text>
           <View style={styles.subtext}>
             <Separator
@@ -54,7 +54,6 @@ const Register = () => {
           </View>
           <View style={styles.inputBoxContainer}>
             <View style={styles.inputBox}>
-              <Text style={styles.phoneCode}>+91</Text>
               <TextInput
                 placeholder="Enter Email"
                 style={styles.inputText}
@@ -128,8 +127,8 @@ const styles = StyleSheet.create({
     marginVertical: '2%',
   },
   subheading: {
-    fontSize: 22,
-    fontWeight: '400',
+    fontSize: 18,
+    fontWeight: '600',
     textAlign: 'center',
     color: Colors.subHeadingBlack,
     marginVertical: '2%',
@@ -140,33 +139,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginVertical: '2%',
   },
-  flagContainer: {
-    height:
-      Dimensions.get('screen').height > 700
-        ? Dimensions.get('screen').height * 0.06
-        : Dimensions.get('screen').height * 0.08,
-    width: '16%',
-    marginRight: '2%',
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 5,
-    borderColor: Colors.borderGray,
-    borderWidth: 0.5,
-    padding: 5,
-    backgroundColor: Colors.white,
-    shadowColor: Colors.black,
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.4,
-    shadowRadius: 2,
-
-    elevation: 5,
-  },
   inputBox: {
     flexDirection: 'row',
-    width: '70%',
+    width: '80%',
     height: '100%',
     borderWidth: 0.5,
     borderRadius: 5,

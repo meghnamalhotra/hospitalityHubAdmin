@@ -28,6 +28,9 @@ const styles = StyleSheet.create({
   },
   button: {
     backgroundColor: Colors.buttonBlue,
+    width: '82%',
+    alignSelf: 'center',
+    borderRadius: 5,
   },
 });
 
