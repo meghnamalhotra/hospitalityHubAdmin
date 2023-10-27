@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { useColorScheme } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
+import { Colors } from '../theme/colors';
 
 const Checkbox = () => {
   const colorScheme = useColorScheme();
   const [toggleCheckBox, setToggleCheckBox] = useState(false);
 
-  const checkboxColor = colorScheme === 'dark' ? 'black' : 'black';
-  const borderColor = colorScheme === 'dark' ? 'black' : 'black';
+  const checkboxColor = colorScheme === 'dark' ? Colors.black : Colors.black;
+  const borderColor = colorScheme === 'dark' ? Colors.black : Colors.black;
 
   return (
     <CheckBox
