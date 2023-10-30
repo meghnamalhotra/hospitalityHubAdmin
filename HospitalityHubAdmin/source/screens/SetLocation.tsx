@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
   bt: {
     marginTop: '20%',
     marginHorizontal: 16,
-    marginVertical: 48,
+    marginVertical: 60,
     paddingHorizontal: 22,
     maxWidthwidth: 140,
     paddingVertical: 12,

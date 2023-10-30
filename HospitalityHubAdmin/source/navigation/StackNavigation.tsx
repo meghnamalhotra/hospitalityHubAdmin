@@ -13,6 +13,7 @@ import Enter from '../screens/Enter';
 import Login from '../screens/Login';
 import SetLocation from '../screens/SetLocation';
 import Amenities from '../screens/Amenities';
+import Policies from '../screens/Policies';
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
@@ -29,6 +30,7 @@ const StackNavigation = () => {
           <Stack.Screen name="LikeList" component={LikeList} />
           <Stack.Screen name="Setting" component={Setting} />
           <Stack.Screen name="TabNavigation" component={TabNavigator} />
+          <Stack.Screen name="Policies" component={Policies} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
