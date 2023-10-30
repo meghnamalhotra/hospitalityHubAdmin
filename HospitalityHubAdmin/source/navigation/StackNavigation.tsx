@@ -18,6 +18,7 @@ import Policies from '../screens/Policies';
 import Finance from '../screens/Finance&Legal';
 
 import BasicInformation from '../screens/BasicInformation';
+import RoomDescription from '../screens/RoomDescription';
 
 const Stack = createStackNavigator();
 const StackNavigation = () => {
@@ -32,6 +33,7 @@ const StackNavigation = () => {
           <Stack.Screen name="SetLocation" component={SetLocation} />
           <Stack.Screen name="BasicInformation" component={BasicInformation} />
           <Stack.Screen name="Amenities" component={Amenities} />
+          <Stack.Screen name="RoomDescription" component={RoomDescription} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="LikeList" component={LikeList} />
           <Stack.Screen name="Setting" component={Setting} />
