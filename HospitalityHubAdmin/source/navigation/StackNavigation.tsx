@@ -19,6 +19,7 @@ import Finance from '../screens/Finance&Legal';
 
 import BasicInformation from '../screens/BasicInformation';
 import RoomDescription from '../screens/RoomDescription';
+import SelectLocation from '../screens/SelectLocation';
 
 import FinalVerification from '../screens/FinalVerificaiton';
 const Stack = createStackNavigator();
@@ -32,6 +33,7 @@ const StackNavigation = () => {
           <Stack.Screen name="Enter" component={Enter} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="SetLocation" component={SetLocation} />
+          <Stack.Screen name="SelectLocation" component={SelectLocation} />
           <Stack.Screen name="BasicInformation" component={BasicInformation} />
           <Stack.Screen name="Amenities" component={Amenities} />
           <Stack.Screen name="RoomDescription" component={RoomDescription} />
