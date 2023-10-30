@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import {Colors} from '../theme/colors';
 import {Button, Checkbox} from '../components';
-import {BlackCheckBox} from '../assets/svgs';
 
 const Likelist = ({navigation}: any) => {
   const handlePress = () => {
@@ -47,18 +46,19 @@ const Likelist = ({navigation}: any) => {
           </View>
           <View style={styles.checkBoxContainer}>
             <TouchableOpacity>
-             <Checkbox/>
+              <Checkbox />
             </TouchableOpacity>
             <Text style={styles.checkboxTxt}>Entire Property</Text>
           </View>
           <View style={styles.checkBoxContainer}>
             <TouchableOpacity>
-            <Checkbox/>
+              <Checkbox />
             </TouchableOpacity>
             <Text style={styles.checkboxTxt}>Private Property</Text>
           </View>
-
-          <Button title={'Next'} onPress={handlePress} />
+          <View style={styles.btncontainer}>
+            <Button title={'Next'} onPress={handlePress} />
+          </View>
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   heading: {
     fontWeight: 'bold',
     fontSize: 25,
-    color:Colors.black
+    color: Colors.black,
   },
   buttons: {
     padding: 20,
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
   buttonTxt: {
     fontWeight: 'bold',
     fontSize: 20,
-    color:Colors.black
+    color: Colors.black,
   },
   checkBoxContainer: {
     flexDirection: 'row',
@@ -94,8 +94,9 @@ const styles = StyleSheet.create({
   checkboxTxt: {
     marginHorizontal: 20,
     fontWeight: '500',
-     color:Colors.black,
-     fontSize:17,
+    color: Colors.black,
+    fontSize: 17,
   },
+  btncontainer: {marginBottom: 20},
 });
 export default Likelist;
