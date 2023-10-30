@@ -14,7 +14,11 @@ import Login from '../screens/Login';
 import SetLocation from '../screens/SetLocation';
 import Amenities from '../screens/Amenities';
 import Policies from '../screens/Policies';
+
 import Finance from '../screens/Finance&Legal';
+
+import BasicInformation from '../screens/BasicInformation';
+
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
@@ -26,6 +30,7 @@ const StackNavigation = () => {
           <Stack.Screen name="Enter" component={Enter} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="SetLocation" component={SetLocation} />
+          <Stack.Screen name="BasicInformation" component={BasicInformation} />
           <Stack.Screen name="Amenities" component={Amenities} />
           <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen name="LikeList" component={LikeList} />
