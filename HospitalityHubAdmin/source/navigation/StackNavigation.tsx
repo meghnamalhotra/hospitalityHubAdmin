@@ -14,14 +14,12 @@ import Login from '../screens/Login';
 import SetLocation from '../screens/SetLocation';
 import Amenities from '../screens/Amenities';
 import Policies from '../screens/Policies';
-
 import Finance from '../screens/Finance&Legal';
-
 import BasicInformation from '../screens/BasicInformation';
 import RoomDescription from '../screens/RoomDescription';
 import SelectLocation from '../screens/SelectLocation';
-
 import FinalVerification from '../screens/FinalVerificaiton';
+import PropertyDescription from '../screens/PropertyDescription';
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
@@ -44,6 +42,8 @@ const StackNavigation = () => {
           <Stack.Screen name="Policies" component={Policies} />
           <Stack.Screen name="Finance" component={Finance} />
           <Stack.Screen name="FinalVerification" component={FinalVerification} />
+          <Stack.Screen name="PropertyDescription" component={PropertyDescription} />
+
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

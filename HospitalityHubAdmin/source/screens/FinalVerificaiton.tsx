@@ -4,7 +4,7 @@ import {Button} from '../components';
 import {Colors} from '../theme/colors';
 const FinalVerification = ({navigation}: any) => {
   const handlePress = () => {
-    navigation.navigate('Finance');
+    navigation.navigate('TabNavigation');
   };
   return (
     <SafeAreaView style={styles.container}>
