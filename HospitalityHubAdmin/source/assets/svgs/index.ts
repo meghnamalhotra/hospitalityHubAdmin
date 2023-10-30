@@ -5,4 +5,16 @@ import PhoneImage from './phoneImage.svg';
 import EnterImage from './enterImage.svg';
 import FadeCircle from './fadeEllipse.svg';
 import FillCircle from './fillElipse.svg';
-export {HotelView, FbSVG, GoogleSVG,PhoneImage, EnterImage, FillCircle, FadeCircle};
+import Location from './location.svg';
+import Rectangle from './rectangle.svg';
+export {
+  HotelView,
+  Rectangle,
+  FbSVG,
+  GoogleSVG,
+  PhoneImage,
+  EnterImage,
+  FillCircle,
+  FadeCircle,
+  Location,
+};
