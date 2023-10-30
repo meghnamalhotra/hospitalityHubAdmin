@@ -32,8 +32,8 @@ const RoomDescription=({navigation}: any)=>{
 }
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      backgroundColor: Colors.backgroundColor,
+        flex: 1,
+        backgroundColor: Colors.backgroundColor,
     },
     txt:{
         marginLeft: '4%',
@@ -42,29 +42,17 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
     input: {
-    height: '10%',
-    margin: '4%',
-    borderWidth: 1,
-    padding: '2%',
-    borderRadius: 10,
-    borderColor: '#ACACAC',
-    fontSize: 20,
-    paddingLeft: '6%',
-    fontWeight: '600',
-    },
-    input2: {
         height: '10%',
         margin: '4%',
-        width: '20%',
         borderWidth: 1,
         padding: '2%',
         borderRadius: 10,
-        borderColor: '#ACACAC',
-        fontSize: 16,
-        paddingLeft: '4%',
+        borderColor: Colors.greyBorder,
+        fontSize: 20,
+        paddingLeft: '6%',
         fontWeight: '600',
-        overflow: 'hidden',
-        },
+        backgroundColor: Colors.white,
+    },
     txt2:{
         marginLeft: '4%',
         fontSize: 20,
@@ -80,7 +68,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: Colors.lighBlue,
-       shadowColor: '#000',
+        shadowColor: '#000',
         shadowOffset: {
           width: 0,
           height: 2,
@@ -90,7 +78,7 @@ const styles = StyleSheet.create({
         elevation: 5,
         activeOpacity: 0.7,
       },
-      btn: {
+  btn: {
         color: Colors.white,
       },
 })

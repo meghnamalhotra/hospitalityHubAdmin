@@ -4,6 +4,7 @@ export const Colors = {
   blue: 'blue',
   grey: '#949494',
   dullBlack: '#575757',
+  greyBorder: '#ACACAC',
   borderGray: '#E6E6E6',
   lightgray: 'lightgray',
   subHeadingBlack: '#707071',
