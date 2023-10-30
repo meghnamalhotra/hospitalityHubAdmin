@@ -6,7 +6,7 @@ import { Colors } from '../theme/colors';
 
 const Verification = () => {
     const navigation = useNavigation<any>();
-    useEffect(() => {setTimeout(() => navigation.navigate('Enter'),3000)},[]);
+    useEffect(() => {setTimeout(() => navigation.navigate('Enter'),1500)},[]);
     return (
         <SafeAreaView style={styles.main}>
             <PhoneImage />
