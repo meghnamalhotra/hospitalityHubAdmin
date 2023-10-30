@@ -18,9 +18,9 @@ const Finance = ({navigation}: any) => {
   return (
     <SafeAreaView>
       <ScrollView style={{backgroundColor: Colors.backgroundColor}}>
-        <TextInput style={styles.input} value="PAN Details" />
-        <TextInput style={styles.input} value="Property Information" />
-        <TextInput style={styles.input} value="GST Details" />
+        <TextInput style={styles.input} placeholder="PAN Details" />
+        <TextInput style={styles.input} placeholder="Property Information" />
+        <TextInput style={styles.input} placeholder="GST Details" />
         <Text style={styles.containerHeading}>Property Information</Text>
         <Text style={styles.containerDetail}>
           Is your property owned or leased
@@ -28,7 +28,7 @@ const Finance = ({navigation}: any) => {
         <View style={styles.CheckBoxContainer}>
           <View style={styles.checkBoxInput}>
             <Checkbox />
-            <Text style={styles.checkBoxTxt}>Owned             </Text>
+            <Text style={styles.checkBoxTxt}>Owned</Text>
           </View>
           <View style={styles.checkBoxInput}>
             <Checkbox />
@@ -39,7 +39,7 @@ const Finance = ({navigation}: any) => {
         <View style={styles.CheckBoxContainer}>
           <View style={styles.checkBoxInput}>
             <Checkbox />
-            <Text style={styles.checkBoxTxt}>Yes                   </Text>
+            <Text style={styles.checkBoxTxt}>Yes       </Text>
           </View>
           <View style={styles.checkBoxInput}>
             <Checkbox />
@@ -47,12 +47,7 @@ const Finance = ({navigation}: any) => {
           </View>
         </View>
         <TouchableOpacity
-          style={{
-            padding: 60,
-            backgroundColor: Colors.lightgray,
-            margin: 20,
-            borderRadius: 5,
-          }}>
+          style={styles.documnet}>
           <View style={{alignItems: 'center'}}>
             <FileDocument/>
             <Text>Upload Registration</Text>
@@ -65,7 +60,7 @@ const Finance = ({navigation}: any) => {
 };
 const styles = StyleSheet.create({
   input: {
-    height: 56,
+    height: 70,
     margin: 12,
     borderWidth: 1,
     padding: 15,
@@ -83,15 +78,23 @@ const styles = StyleSheet.create({
   },
   CheckBoxContainer: {
     flexDirection: 'row',
-    marginHorizontal:50
+    marginHorizontal:50,
   },
   checkBoxInput: {
+    padding:10,
+    justifyContent:'space-between',
     flexDirection: 'row',
     marginVertical: 30,
   },
   checkBoxTxt: {
     marginHorizontal: 20,
     margin: 7,
+  },
+  documnet:{
+    padding: 60,
+    backgroundColor: Colors.lightgray,
+    margin: 20,
+    borderRadius: 5,
   },
 });
 export default Finance;

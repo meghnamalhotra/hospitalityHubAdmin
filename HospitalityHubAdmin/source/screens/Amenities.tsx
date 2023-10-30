@@ -9,7 +9,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const Amenities = ({navigation}: any) => {
   const handlePress = () => {
-    navigation.navigate('RoomDescription');
+    navigation.navigate('PropertyDescription');
   };
   return (
     <SafeAreaView>
