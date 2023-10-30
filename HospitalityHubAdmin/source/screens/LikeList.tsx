@@ -12,7 +12,7 @@ import {Button, Checkbox} from '../components';
 
 const Likelist = ({navigation}: any) => {
   const handlePress = () => {
-    navigation.navigate('SetLocation');
+    navigation.navigate('BasicInformation');
   };
   return (
     <SafeAreaView>
