@@ -7,6 +7,8 @@ import FadeCircle from './fadeEllipse.svg';
 import FillCircle from './fillElipse.svg';
 import Location from './location.svg';
 import Rectangle from './rectangle.svg';
+import HotelVector from './hotelImage.svg';
+import KeyVector from './keyVector.svg';
 export {
   HotelView,
   Rectangle,
@@ -17,4 +19,6 @@ export {
   FillCircle,
   FadeCircle,
   Location,
+  HotelVector,
+  KeyVector,
 };
