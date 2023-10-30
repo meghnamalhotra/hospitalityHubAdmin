@@ -20,6 +20,7 @@ import Finance from '../screens/Finance&Legal';
 import BasicInformation from '../screens/BasicInformation';
 import RoomDescription from '../screens/RoomDescription';
 
+import FinalVerification from '../screens/FinalVerificaiton';
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
@@ -40,6 +41,7 @@ const StackNavigation = () => {
           <Stack.Screen name="TabNavigation" component={TabNavigator} />
           <Stack.Screen name="Policies" component={Policies} />
           <Stack.Screen name="Finance" component={Finance} />
+          <Stack.Screen name="FinalVerification" component={FinalVerification} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
