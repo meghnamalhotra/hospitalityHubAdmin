@@ -10,15 +10,15 @@ const RoomDescription=({navigation}: any)=>{
         <Text style={styles.txt}>Room Description</Text>
         <TextInput
         style={styles.input}
-        placeholder="Stay/Hotel Name"
+        placeholder="Base Price"
         />
         <TextInput
         style={styles.input}
-        placeholder="Contact Number"
+        placeholder="Number of Extra Adults Allowed"
         />
          <TextInput
         style={styles.input}
-        placeholder="Email Address"
+        placeholder="Number of Extra Child Allowed"
         />
           <TouchableOpacity
         style={styles.bt}
