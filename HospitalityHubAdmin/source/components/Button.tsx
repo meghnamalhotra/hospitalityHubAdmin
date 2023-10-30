@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     letterSpacing: 0.5,
     textAlign: 'center',
-    fontSize: 22,
+    fontSize: 20,
   },
   button: {
     backgroundColor: Colors.buttonBlue,

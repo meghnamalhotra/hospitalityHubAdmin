@@ -6,6 +6,7 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import { Colors } from '../theme/colors';
 import Reviews from '../screens/Reviews';
 import Dashboard from '../screens/Dashboard';
+import Booking from '../screens/Booking';
 
 const Tab = createBottomTabNavigator();
 
@@ -75,7 +76,7 @@ const TabNavigator = () => {
     }}>
       <Tab.Screen
         name="Bookings"
-        component={Home}
+        component={Booking}
         options={{
           headerShown: false,
           tabBarActiveTintColor: Colors.lighBlue,

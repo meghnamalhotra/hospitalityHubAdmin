@@ -15,4 +15,5 @@ export const Colors = {
   blueGradient2: 'rgba(54, 200, 246, 1)',
   blueGradient3: 'rgba(160, 251, 205, 1)',
   buttonBlue: '#1f91b7',
+  textBlue: '#71a8fc',
 };
