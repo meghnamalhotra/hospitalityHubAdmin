@@ -13,7 +13,7 @@ import {Button, Checkbox} from '../components';
 import { FileDocument } from '../assets/svgs';
 const Finance = ({navigation}: any) => {
   const handlePress = () => {
-    navigation.navigate('Finance');
+    navigation.navigate('FinalVerification');
   };
   return (
     <SafeAreaView>
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     padding: 15,
     borderRadius: 5,
-    backgroundColor: 'white',
+    backgroundColor: Colors.white,
   },
   containerHeading: {
     fontSize: 18,
@@ -83,8 +83,7 @@ const styles = StyleSheet.create({
   },
   CheckBoxContainer: {
     flexDirection: 'row',
-    // justifyContent: 'space-around',
-    marginHorizontal:80
+    marginHorizontal:50
   },
   checkBoxInput: {
     flexDirection: 'row',
