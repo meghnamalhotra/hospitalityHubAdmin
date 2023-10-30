@@ -14,6 +14,7 @@ import Login from '../screens/Login';
 import SetLocation from '../screens/SetLocation';
 import Amenities from '../screens/Amenities';
 import Policies from '../screens/Policies';
+import Finance from '../screens/Finance&Legal';
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
@@ -31,6 +32,7 @@ const StackNavigation = () => {
           <Stack.Screen name="Setting" component={Setting} />
           <Stack.Screen name="TabNavigation" component={TabNavigator} />
           <Stack.Screen name="Policies" component={Policies} />
+          <Stack.Screen name="Finance" component={Finance} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>

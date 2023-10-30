@@ -9,7 +9,9 @@ import Location from './location.svg';
 import Rectangle from './rectangle.svg';
 import HotelVector from './hotelImage.svg';
 import KeyVector from './keyVector.svg';
+import FileDocument from './filedocument.svg';
 export {
+  FileDocument,
   HotelView,
   Rectangle,
   FbSVG,
