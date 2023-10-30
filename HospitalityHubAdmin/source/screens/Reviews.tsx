@@ -2,14 +2,14 @@ import React from 'react';
 import {Text, View,StyleSheet} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
-const Home =({navigation} : any) => {
+const Reviews =({navigation} : any) => {
   return (
     <View>
       <TouchableOpacity
         onPress={() => {
-          navigation.navigate('SetLocation');
+        //   navigation.navigate('SetLocation');
         }}>
-        <Text style={style.text}>home screen here</Text>
+        <Text style={style.text}>Review screen here</Text>
       </TouchableOpacity>
     </View>
   );
@@ -19,4 +19,4 @@ text:{
   fontFamily:'Poppins-Bold'
 }
 })
-export default Home;
+export default Reviews;

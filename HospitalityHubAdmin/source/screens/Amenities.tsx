@@ -1,11 +1,17 @@
 import React, {useState} from 'react';
 import {SafeAreaView, Text, View, ScrollView, StyleSheet} from 'react-native';
+
 import {Rectangle} from '../assets/svgs';
 import CheckBox from '@react-native-community/checkbox';
 import {Button} from '../components';
 import {Colors} from '../theme/colors';
+import { useNavigation } from '@react-navigation/native';
 
 const Amenities = () => {
+  const navigation = useNavigation<any>();
+  const handlePress = () => {
+    navigation.navigate('Setting');
+  };
   return (
     <SafeAreaView>
       <ScrollView>
@@ -54,7 +60,7 @@ const Amenities = () => {
           </View>
 
           <View style={styles.buttonContainer}>
-            <Button title={'DONE'} />
+            <Button title={'Done'} onPress={handlePress}/>
           </View>
         </View>
       </ScrollView>

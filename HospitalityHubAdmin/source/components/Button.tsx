@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
     textAlign: 'center',
     fontSize: 22,
-    paddingBottom: 8,
   },
   button: {
     backgroundColor: Colors.buttonBlue,
@@ -36,6 +35,7 @@ const styles = StyleSheet.create({
         ? Dimensions.get('screen').height * 0.06
         : Dimensions.get('screen').height * 0.07,
     alignSelf: 'center',
+    alignItems: 'center',
     borderRadius: 5,
     marginTop: '2%',
     justifyContent: 'center',
