@@ -7,10 +7,9 @@ import {Button} from '../components';
 import {Colors} from '../theme/colors';
 import { useNavigation } from '@react-navigation/native';
 
-const Amenities = () => {
-  const navigation = useNavigation<any>();
+const Amenities = ({navigation}: any) => {
   const handlePress = () => {
-    navigation.navigate('Setting');
+    navigation.navigate('Finance');
   };
   return (
     <SafeAreaView>
@@ -60,7 +59,7 @@ const Amenities = () => {
           </View>
 
           <View style={styles.buttonContainer}>
-            <Button title={'Done'} onPress={handlePress}/>
+            <Button title={'DONE'} onPress={handlePress} />
           </View>
         </View>
       </ScrollView>

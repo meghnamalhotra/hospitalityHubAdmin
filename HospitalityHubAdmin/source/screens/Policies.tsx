@@ -5,7 +5,7 @@ import {Button} from '../components';
 
 const Policies = ({navigation}: any) => {
   const handlePress = () => {
-    navigation.navigate('Policies');
+    navigation.navigate('Finance');
   };
   return (
     <SafeAreaView>
