@@ -129,6 +129,7 @@ const styles = StyleSheet.create({
   options: {
     margin: 15,
     fontWeight: '600',
-     fontSize: 18},
+     fontSize: 22
+    },
 });
 export default PropertyDescription;

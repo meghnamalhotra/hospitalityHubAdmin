@@ -10,7 +10,9 @@ import Rectangle from './rectangle.svg';
 import HotelVector from './hotelImage.svg';
 import KeyVector from './keyVector.svg';
 import FileDocument from './filedocument.svg';
+import Interior from './interiror.svg'
 export {
+  Interior,
   FileDocument,
   HotelView,
   Rectangle,
