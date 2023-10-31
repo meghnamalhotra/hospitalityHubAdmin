@@ -18,9 +18,9 @@ const Finance = ({navigation}: any) => {
   return (
     <SafeAreaView>
       <ScrollView style={{backgroundColor: Colors.backgroundColor}}>
-        <TextInput style={styles.input} placeholder="PAN Details" />
-        <TextInput style={styles.input} placeholder="Property Information" />
-        <TextInput style={styles.input} placeholder="GST Details" />
+        <TextInput style={styles.input} placeholderTextColor="#949494" placeholder="PAN Details" />
+        <TextInput style={styles.input} placeholderTextColor="#949494" placeholder="Property Information" />
+        <TextInput style={styles.input} placeholderTextColor="#949494" placeholder="GST Details" />
         <Text style={styles.containerHeading}>Property Information</Text>
         <Text style={styles.containerDetail}>
           Is your property owned or leased
@@ -71,30 +71,36 @@ const styles = StyleSheet.create({
     fontSize: 18,
     margin: 16,
     fontWeight: 'bold',
+    color: Colors.black,
   },
   containerDetail: {
     fontSize: 15,
     marginHorizontal: 16,
+    color: Colors.black,
   },
   CheckBoxContainer: {
     flexDirection: 'row',
     marginHorizontal:50,
+    color: Colors.black,
   },
   checkBoxInput: {
     padding:10,
     justifyContent:'space-between',
     flexDirection: 'row',
     marginVertical: 30,
+    color: Colors.black,
   },
   checkBoxTxt: {
     marginHorizontal: 20,
     margin: 7,
+    color: Colors.black,
   },
   documnet:{
     padding: 60,
     backgroundColor: Colors.lightgray,
     margin: 20,
     borderRadius: 5,
+    color: Colors.black,
   },
 });
 export default Finance;

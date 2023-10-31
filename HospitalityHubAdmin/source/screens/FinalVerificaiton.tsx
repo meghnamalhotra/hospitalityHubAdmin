@@ -49,6 +49,7 @@ const styles = StyleSheet.create({
   },
   margin: {
     margin: 20,
+    color: Colors.black,
   },
   points: {
     color:Colors.black,

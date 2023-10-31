@@ -1,7 +1,8 @@
 import CheckBox from '@react-native-community/checkbox';
 import React from 'react';
-import {SafeAreaView, ScrollView, StyleSheet, Text, View} from 'react-native';
+import {SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Button} from '../components';
+import { Colors } from '../theme/colors';
 
 const Policies = ({navigation}: any) => {
   const handlePress = () => {
@@ -47,15 +48,18 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontSize: 25,
     margin: 15,
+    color: Colors.black
   },
   checkBoxContainer: {
     flexDirection: 'row',
     justifyContent: 'space-around',
     marginBottom: 20,
+    color: Colors.black,
   },
   checkBox: {
     fontSize: 20,
     fontWeight: '600',
+    color: Colors.black,
   },
 });
 export default Policies;
