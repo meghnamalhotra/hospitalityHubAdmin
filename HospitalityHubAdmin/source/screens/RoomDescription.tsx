@@ -4,6 +4,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Colors } from "../theme/colors";
 
 const RoomDescription=({navigation}: any)=>{
+  const handlePress = () => {
+    navigation.navigate('TopTabNavigation');
+  };
     return(
     <SafeAreaView style={styles.container}>
         
@@ -22,9 +25,7 @@ const RoomDescription=({navigation}: any)=>{
         />
           <TouchableOpacity
         style={styles.bt}
-        onPress={() => {
-          navigation.navigate('Policies');
-        }}>
+        onPress={handlePress}>
         <Text style={styles.btn}>Next</Text>
       </TouchableOpacity>
     </SafeAreaView>

@@ -20,6 +20,8 @@ import RoomDescription from '../screens/RoomDescription';
 import SelectLocation from '../screens/SelectLocation';
 import FinalVerification from '../screens/FinalVerificaiton';
 import PropertyDescription from '../screens/PropertyDescription';
+import UploadImage from '../screens/UploadImages';
+import TopTabNavigation from './TopTabNavigation';
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
@@ -43,6 +45,10 @@ const StackNavigation = () => {
           <Stack.Screen name="Finance" component={Finance} />
           <Stack.Screen name="FinalVerification" component={FinalVerification} />
           <Stack.Screen name="PropertyDescription" component={PropertyDescription} />
+          <Stack.Screen name="UploadImage" component={UploadImage} />
+          <Stack.Screen name="TopTabNavigation" component={TopTabNavigation} />
+
+          
 
         </Stack.Navigator>
       </NavigationContainer>
