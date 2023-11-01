@@ -1,20 +1,20 @@
 import React, { useMemo, useState } from 'react';
 import RadioGroup, {RadioButtonProps} from 'react-native-radio-buttons-group';
 
-export default function RadioButton() {
+export default function RadioButton({label1,label2,Direction}:any) {
 
     const radioButtons: RadioButtonProps[] = useMemo(( ) => ([
         {
             id: '1', // acts as primary key, should be unique and non-empty string
-            label: 'Enter Property ',
+            label: label1,
             value: 'option1',
-            labelStyle:{marginLeft:30}
+            labelStyle:{marginLeft:15,fontSize:20}
         },
         {
             id: '2',
-            label: ' Private Property',
+            label: label2,
             value: 'option2',
-            labelStyle:{marginLeft:20}
+            labelStyle:{marginLeft:15,fontSize:20}
         },
     ]),
     
@@ -28,7 +28,7 @@ export default function RadioButton() {
             radioButtons={radioButtons} 
             onPress={setSelectedId}
             selectedId={selectedId}
-            containerStyle={{margin:20,right:80}}
+            containerStyle={{flexDirection:Direction,justifyContent:'space-around'}}
         />
         </>
     );

@@ -8,7 +8,7 @@ import {
   ScrollView,
 } from 'react-native';
 import {Colors} from '../theme/colors';
-import {Button, Checkbox} from '../components';
+import {Button} from '../components';
 import RadioButton from '../components/RadioButton';
 
 const Likelist = ({navigation}: any) => {
@@ -45,8 +45,11 @@ const Likelist = ({navigation}: any) => {
               Now would you like to set the Property
             </Text>
           </View>
-          <View style={{}}>
-          <RadioButton />
+          <View style={{marginRight: '40%'}}>
+            <RadioButton
+              label1={'Entire Property  '}
+              label2={'Private Property'}
+            />
           </View>
           <View style={styles.btncontainer}>
             <Button title={'Next'} onPress={handlePress} />

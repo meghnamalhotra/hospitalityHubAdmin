@@ -9,8 +9,9 @@ import {
   View,
 } from 'react-native';
 import {Colors} from '../theme/colors';
-import {Button, Checkbox} from '../components';
-import { FileDocument } from '../assets/svgs';
+import {Button} from '../components';
+import {FileDocument} from '../assets/svgs';
+import RadioButton from '../components/RadioButton';
 const Finance = ({navigation}: any) => {
   const handlePress = () => {
     navigation.navigate('FinalVerification');
@@ -18,38 +19,35 @@ const Finance = ({navigation}: any) => {
   return (
     <SafeAreaView>
       <ScrollView style={{backgroundColor: Colors.backgroundColor}}>
-        <TextInput style={styles.input} placeholderTextColor="#949494" placeholder="PAN Details" />
-        <TextInput style={styles.input} placeholderTextColor="#949494" placeholder="Property Information" />
-        <TextInput style={styles.input} placeholderTextColor="#949494" placeholder="GST Details" />
+        <TextInput
+          style={styles.input}
+          placeholderTextColor="#949494"
+          placeholder="PAN Details"
+        />
+        <TextInput
+          style={styles.input}
+          placeholderTextColor="#949494"
+          placeholder="Property Information"
+        />
+        <TextInput
+          style={styles.input}
+          placeholderTextColor="#949494"
+          placeholder="GST Details"
+        />
         <Text style={styles.containerHeading}>Property Information</Text>
         <Text style={styles.containerDetail}>
           Is your property owned or leased
         </Text>
-        <View style={styles.CheckBoxContainer}>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>Owned</Text>
-          </View>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>Leased</Text>
-          </View>
+        <View style={{margin: 20}}>
+          <RadioButton label1={'Owned'} label2={'Leased'}  Direction={'row'} />
         </View>
         <Text style={styles.containerDetail}>Do you have registration</Text>
-        <View style={styles.CheckBoxContainer}>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>Yes       </Text>
-          </View>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>No</Text>
-          </View>
+        <View style={{marginVertical: 20}}>
+        <RadioButton label1={'Yes'} label2={'No'} Direction={'row'} />
         </View>
-        <TouchableOpacity
-          style={styles.documnet}>
+        <TouchableOpacity style={styles.documnet}>
           <View style={{alignItems: 'center'}}>
-            <FileDocument/>
+            <FileDocument />
             <Text>Upload Registration</Text>
           </View>
         </TouchableOpacity>
@@ -78,24 +76,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     color: Colors.black,
   },
-  CheckBoxContainer: {
-    flexDirection: 'row',
-    marginHorizontal:50,
-    color: Colors.black,
-  },
-  checkBoxInput: {
-    padding:10,
-    justifyContent:'space-between',
-    flexDirection: 'row',
-    marginVertical: 30,
-    color: Colors.black,
-  },
-  checkBoxTxt: {
-    marginHorizontal: 20,
-    margin: 7,
-    color: Colors.black,
-  },
-  documnet:{
+  documnet: {
     padding: 60,
     backgroundColor: Colors.lightgray,
     margin: 20,
