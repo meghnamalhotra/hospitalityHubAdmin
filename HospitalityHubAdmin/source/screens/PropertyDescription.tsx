@@ -6,96 +6,49 @@ import {
   StyleSheet,
   Text,
   TextInput,
-  View,
 } from 'react-native';
-import {Button, Checkbox} from '../components';
+import {Button} from '../components';
+import RadioButton from '../components/RadioButton';
 const PropertyDescription = ({navigation}: any) => {
   const handlePress = () => {
     navigation.navigate('RoomDescription');
   };
   return (
     <SafeAreaView>
-      <ScrollView style={{backgroundColor:Colors.backgroundColor}}>
-        <TextInput style={styles.input} placeholderTextColor="#949494" placeholder="Room Area" />
-        <TextInput style={styles.input} placeholderTextColor="#949494" placeholder="Accommodation Only" />
-        <TextInput style={styles.input} placeholderTextColor="#949494" placeholder="Property Size" />
-        <TextInput style={styles.input} placeholderTextColor="#949494" placeholder="Select Extra Bed Types" />
-        <Text style={styles.options}>
-          Cupboard
-        </Text>
-        <View style={styles.CheckBoxContainer}>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>Yes</Text>
-          </View>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>No</Text>
-          </View>
-        </View>
-        <Text style={styles.options}>
-          Wardrobe
-        </Text>
-        <View style={styles.CheckBoxContainer}>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>Yes</Text>
-          </View>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>No</Text>
-          </View>
-        </View>
-        <Text style={styles.options}>
-          Accommodation Only
-        </Text>
-        <View style={styles.CheckBoxContainer}>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>Yes</Text>
-          </View>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>No</Text>
-          </View>
-        </View>
-        <Text style={styles.options}>
-          Free Breakfast
-        </Text>
-        <View style={styles.CheckBoxContainer}>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>Yes</Text>
-          </View>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>No</Text>
-          </View>
-        </View>
-        <Text style={styles.options}>
-          Free Lunch
-        </Text>
-        <View style={styles.CheckBoxContainer}>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>Yes</Text>
-          </View>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>No</Text>
-          </View>
-        </View>
+      <ScrollView style={{backgroundColor: Colors.backgroundColor}}>
+        <TextInput
+          style={styles.input}
+          placeholderTextColor="#949494"
+          placeholder="Room Area"
+        />
+        <TextInput
+          style={styles.input}
+          placeholderTextColor="#949494"
+          placeholder="Accommodation Only"
+        />
+        <TextInput
+          style={styles.input}
+          placeholderTextColor="#949494"
+          placeholder="Property Size"
+        />
+        <TextInput
+          style={styles.input}
+          placeholderTextColor="#949494"
+          placeholder="Select Extra Bed Types"
+        />
+        <Text style={styles.options}>Cupboard</Text>
+        <RadioButton label1={'Yes'} label2={'No'} Direction={'row'} />
+
+        <Text style={styles.options}>Wardrobe</Text>
+        <RadioButton label1={'Yes'} label2={'No'} Direction={'row'} />
+        <Text style={styles.options}>Accommodation Only</Text>
+        <RadioButton label1={'Yes'} label2={'No'} Direction={'row'} />
+        <Text style={styles.options}>Free Breakfast</Text>
+        <RadioButton label1={'Yes'} label2={'No'} Direction={'row'} />
+        <Text style={styles.options}>Free Lunch</Text>
+        <RadioButton label1={'Yes'} label2={'No'} Direction={'row'} />
         <Text style={styles.options}>Free Dinner</Text>
-        <View style={styles.CheckBoxContainer}>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>Yes</Text>
-          </View>
-          <View style={styles.checkBoxInput}>
-            <Checkbox />
-            <Text style={styles.checkBoxTxt}>No</Text>
-          </View>
-        </View>
+        <RadioButton label1={'Yes'} label2={'No'} Direction={'row'} />
         <Button title="Next" onPress={handlePress} />
       </ScrollView>
     </SafeAreaView>
@@ -112,29 +65,11 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
     color: Colors.black,
   },
-  CheckBoxContainer: {
-    flexDirection: 'row',
-    marginHorizontal: 50,
-    color: Colors.black,
-  },
-  checkBoxInput: {
-    padding: 10,
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    marginVertical: 10,
-    color: Colors.black,
-  },
-  checkBoxTxt: {
-    marginHorizontal: 20,
-    margin: 7,
-    fontSize:17,
-    color: Colors.black,
-  },
   options: {
     margin: 15,
     fontWeight: '600',
     color: Colors.black,
-     fontSize: 22
-    },
+    fontSize: 22,
+  },
 });
 export default PropertyDescription;
