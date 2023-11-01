@@ -169,7 +169,7 @@ const styles = StyleSheet.create({
   },
   socialContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'center',
   },
   socialButton: {
     height:
@@ -177,6 +177,7 @@ const styles = StyleSheet.create({
         ? Dimensions.get('screen').height * 0.056
         : Dimensions.get('screen').height * 0.07,
     width: '35%',
+    marginHorizontal: '2%',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.white,
