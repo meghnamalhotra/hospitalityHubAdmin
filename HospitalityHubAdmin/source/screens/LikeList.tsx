@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import {Colors} from '../theme/colors';
 import {Button, Checkbox} from '../components';
+import RadioButton from '../components/RadioButton';
 
 const Likelist = ({navigation}: any) => {
   const handlePress = () => {
@@ -44,17 +45,8 @@ const Likelist = ({navigation}: any) => {
               Now would you like to set the Property
             </Text>
           </View>
-          <View style={styles.checkBoxContainer}>
-            <TouchableOpacity>
-              <Checkbox />
-            </TouchableOpacity>
-            <Text style={styles.checkboxTxt}>Entire Property</Text>
-          </View>
-          <View style={styles.checkBoxContainer}>
-            <TouchableOpacity>
-              <Checkbox />
-            </TouchableOpacity>
-            <Text style={styles.checkboxTxt}>Private Property</Text>
+          <View style={{}}>
+          <RadioButton />
           </View>
           <View style={styles.btncontainer}>
             <Button title={'Next'} onPress={handlePress} />
