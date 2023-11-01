@@ -48,10 +48,6 @@ const StackNavigation = () => {
           <Stack.Screen name="PropertyDescription" component={PropertyDescription} />
           <Stack.Screen name="UploadImage" component={UploadImage} />
           <Stack.Screen name="TopTabNavigation" component={TopTabNavigation} />
-          <Stack.Screen name="ProfilePage" component={ProfilePage} />
-
-          
-
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
