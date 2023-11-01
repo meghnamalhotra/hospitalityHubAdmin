@@ -22,7 +22,6 @@ import FinalVerification from '../screens/FinalVerificaiton';
 import PropertyDescription from '../screens/PropertyDescription';
 import UploadImage from '../screens/UploadImages';
 import TopTabNavigation from './TopTabNavigation';
-import ProfilePage from '../screens/ProfilePage';
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
@@ -48,13 +47,6 @@ const StackNavigation = () => {
           <Stack.Screen name="PropertyDescription" component={PropertyDescription} />
           <Stack.Screen name="UploadImage" component={UploadImage} />
           <Stack.Screen name="TopTabNavigation" component={TopTabNavigation} />
-<<<<<<< Updated upstream
-          <Stack.Screen name="ProfilePage" component={ProfilePage} />
-
-          
-
-=======
->>>>>>> Stashed changes
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
