@@ -90,7 +90,7 @@ const Dashboard = () => {
             <Text style={styles.detailsText1}>₹ 3,493</Text>
             <Text>+ ₹ 594 taxes and fee</Text>
             <View style={styles.button}>
-              <Button title={''} />
+              <Button title={'edit'} />
             </View>
           </View>
           <View style={styles.imageContainer}>
