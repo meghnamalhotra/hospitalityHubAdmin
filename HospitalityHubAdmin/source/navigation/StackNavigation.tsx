@@ -22,7 +22,6 @@ import FinalVerification from '../screens/FinalVerificaiton';
 import PropertyDescription from '../screens/PropertyDescription';
 import UploadImage from '../screens/UploadImages';
 import TopTabNavigation from './TopTabNavigation';
-import ProfilePage from '../screens/ProfilePage';
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
