@@ -11,6 +11,7 @@ import HotelVector from './hotelImage.svg';
 import KeyVector from './keyVector.svg';
 import FileDocument from './filedocument.svg';
 import Interior from './interiror.svg';
+<<<<<<< Updated upstream
 import Navigate from './navigate.svg';
 import AC from './ac.svg';
 import Wifi from './wifi.svg';
@@ -20,6 +21,10 @@ import Ellipse from './ellipse.svg';
 import Green from './green.svg';
 import Red from './red.svg';
 import Frame from './frame.svg';
+=======
+import Search from './search.svg';
+import LocationIcon from './locationSet.svg'
+>>>>>>> Stashed changes
 export {
   Interior,
   FileDocument,
@@ -34,6 +39,7 @@ export {
   Location,
   HotelVector,
   KeyVector,
+<<<<<<< Updated upstream
   Navigate,
   AC,
   Wifi,
@@ -43,4 +49,8 @@ export {
   Green,
   Red,
   Frame,
+=======
+  Search,
+  LocationIcon,
+>>>>>>> Stashed changes
 };

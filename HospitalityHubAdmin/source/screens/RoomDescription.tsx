@@ -8,8 +8,7 @@ const RoomDescription=({navigation}: any)=>{
     navigation.navigate('TopTabNavigation');
   };
     return(
-    <SafeAreaView style={styles.container}>
-        
+    <SafeAreaView style={styles.container}>    
         <Text style={styles.txt}>Room Description</Text>
         <TextInput
         style={styles.input}
@@ -23,7 +22,7 @@ const RoomDescription=({navigation}: any)=>{
         style={styles.input}
         placeholder="Number of Extra Child Allowed"
         />
-          <TouchableOpacity
+      <TouchableOpacity
         style={styles.bt}
         onPress={handlePress}>
         <Text style={styles.btn}>Next</Text>
