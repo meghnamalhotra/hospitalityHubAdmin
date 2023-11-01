@@ -2,13 +2,14 @@ import React, {useState} from 'react';
 import {Text, View, StyleSheet, SafeAreaView, Dimensions} from 'react-native';
 import {KeyVector} from '../assets/svgs';
 import {Colors} from '../theme/colors';
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import {ScrollView, TouchableOpacity} from 'react-native-gesture-handler';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import Card from '../components/BookingCard';
 
 const Booking = () => {
   return (
     <SafeAreaView style={styles.main}>
+      <ScrollView>
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button}>
           <Text style={styles.buttonText}>Sort</Text>
@@ -32,7 +33,9 @@ const Booking = () => {
             Today
         </Text>
         <Card date={'30 Oct 2023'} id={13932731109} people={3} nights={2} payment={8000} roomType='Triple' checkIn='14 Nov 2023' checkOut='17 Nov 2023'/>
+        <Card date={'28 Oct 2023'} id={13932731119} people={7} nights={4} payment={19000} roomType='Double' checkIn='17 Nov 2023' checkOut='20 Nov 2023'/>
       </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
