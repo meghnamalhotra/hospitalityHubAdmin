@@ -36,18 +36,7 @@ const DATA = [
     id: 7,
     image: <Interior />,
   },
-  {
-    id: 8,
-    image: <Interior />,
-  },
-  {
-    id: 9,
-    image: <Interior />,
-  },
-  {
-    id: 10,
-    image: <Interior />,
-  },
+  
 ];
 
 const UploadImage = ({navigation}: any) => {
