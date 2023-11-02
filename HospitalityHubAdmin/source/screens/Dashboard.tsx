@@ -46,7 +46,6 @@ const Dashboard = () => {
             </Text>
           </View>
         </TouchableOpacity>
-
         <TouchableOpacity style={styles.card}>
           <Text style={styles.bookingTitle}>Total Bookings</Text>
           <View style={styles.bookingDetailsContainer}>
@@ -59,7 +58,16 @@ const Dashboard = () => {
         </TouchableOpacity>
 
         <Text style={styles.text}>Recent Bookings</Text>
-        <Card date={undefined} id={undefined} people={0} nights={0} payment={0} roomType={''} checkIn={''} checkOut={''} />
+        <Card
+          date={undefined}
+          id={undefined}
+          people={0}
+          nights={0}
+          payment={0}
+          roomType={''}
+          checkIn={''}
+          checkOut={''}
+        />
         <Text style={styles.text}>Rooms Listed</Text>
         <View style={styles.bookingContainer}>
           <View style={styles.textContainer}>
