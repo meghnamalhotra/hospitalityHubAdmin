@@ -19,8 +19,8 @@ import {Separator, Button} from '../components';
 
 const Register = () => {
   const navigation = useNavigation<any>();
-  const [isValue, setValue] = useState('');
-  const [isValid, setValid] = useState([]);
+  const [isValue, setValue] = useState<string>('');
+  const [isValid, setValid] = useState<any>([]);
   const regex =
   /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const handlePress = () => {
