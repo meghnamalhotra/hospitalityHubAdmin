@@ -231,8 +231,8 @@ const styles = StyleSheet.create({
   },
   eyeButton: {
     borderRadius: 50,
-    padding: 2,
-    backgroundColor: Colors.dullBlack,
+    padding: 3,
+    backgroundColor: Colors.buttonBlue,
   },
   socialContainer: {
     flexDirection: 'row',
