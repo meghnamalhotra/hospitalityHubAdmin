@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   SafeAreaView,
@@ -10,16 +10,41 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   Platform,
+  Alert,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import { HotelView, FbSVG, GoogleSVG, FadeCircle, FillCircle } from '../assets/svgs';
-import { Colors } from '../theme/colors';
-import { Separator, Button} from '../components';
+import {
+  HotelView,
+  FbSVG,
+  GoogleSVG,
+  FadeCircle,
+  FillCircle,
+} from '../assets/svgs';
+import {Colors} from '../theme/colors';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import {Separator, Button} from '../components';
 
-const Login= () => {
+const Login = () => {
   const navigation = useNavigation<any>();
+  const [isEmail, setEmail] = useState<string>('');
+  const [isEmailValid, setEmailValid] = useState<any>([]);
+  const [isPassword, setPassword] = useState<string>('');
+  const [isPasswordValid, setPasswordValid] = useState<any>([]);
+  const [secureEntry, setSecureEntry] = useState<boolean>(true);
+  const emailRegex =
+    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const PasswordRegex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   const handlePress = () => {
-    navigation.navigate('LikeList');
+    if (!isEmail || !isPassword || (!isEmail && !isPassword)) {
+      return Alert.alert('Please fill all fields');
+    } else if (!isEmailValid) {
+      return Alert.alert('Please enter valid email');
+    } else if (!isPasswordValid) {
+      return Alert.alert('Please enter a strong password');
+    } else {
+      navigation.navigate('LikeList');
+    }
   };
 
   return (
@@ -28,14 +53,14 @@ const Login= () => {
       style={styles.main}>
       <SafeAreaView style={styles.main}>
         <ScrollView style={styles.titleText}>
-            <View style={styles.headerContainer}>
+          <View style={styles.headerContainer}>
             <View style={styles.leftHeader}>
-                <FadeCircle />
+              <FadeCircle />
             </View>
             <View>
-                <FillCircle />
+              <FillCircle />
             </View>
-            </View> 
+          </View>
           <View style={styles.subtext}>
             <Separator
               width={'30%'}
@@ -54,6 +79,10 @@ const Login= () => {
               <TextInput
                 placeholder="Enter Email"
                 style={styles.inputText}
+                onChangeText={email => {
+                  setEmail(email);
+                  setEmailValid(email.match(emailRegex));
+                }}
                 placeholderTextColor={Colors.lightgray}
               />
             </View>
@@ -63,8 +92,24 @@ const Login= () => {
               <TextInput
                 placeholder="Enter Password"
                 style={styles.inputText}
+                onChangeText={password => {
+                  setPassword(password);
+                  setPasswordValid(password.match(PasswordRegex));
+                }}
                 placeholderTextColor={Colors.lightgray}
+                secureTextEntry={secureEntry}
               />
+              <TouchableOpacity style={styles.eyeButton} onPress={()=> setSecureEntry(!secureEntry)}>
+              {secureEntry ? <MaterialCommunityIcons
+                name="eye-off"
+                color={Colors.white}
+                size={25}
+              /> : <MaterialCommunityIcons
+              name="eye"
+              color={Colors.white}
+              size={25}
+            />}
+              </TouchableOpacity>
             </View>
           </View>
 
@@ -152,7 +197,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: '2%',
-    height: Dimensions.get('screen').height > 700 ? Dimensions.get('screen').height * 0.06 : Dimensions.get('screen').height * 0.07,
+    height:
+      Dimensions.get('screen').height > 700
+        ? Dimensions.get('screen').height * 0.06
+        : Dimensions.get('screen').height * 0.07,
   },
   inputBox: {
     flexDirection: 'row',
@@ -180,6 +228,11 @@ const styles = StyleSheet.create({
     width: '90%',
     fontSize: 16,
     fontWeight: '600',
+  },
+  eyeButton: {
+    borderRadius: 50,
+    padding: 2,
+    backgroundColor: Colors.dullBlack,
   },
   socialContainer: {
     flexDirection: 'row',

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   SafeAreaView,
@@ -10,16 +10,27 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   Platform,
+  Alert,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import { HotelView, FbSVG, GoogleSVG } from '../assets/svgs';
-import { Colors } from '../theme/colors';
-import { Separator, Button} from '../components';
+import {HotelView, FbSVG, GoogleSVG} from '../assets/svgs';
+import {Colors} from '../theme/colors';
+import {Separator, Button} from '../components';
 
 const Register = () => {
   const navigation = useNavigation<any>();
+  const [isValue, setValue] = useState('');
+  const [isValid, setValid] = useState([]);
+  const regex =
+  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   const handlePress = () => {
-    navigation.navigate('Verification');
+    if (!isValue) {
+      return Alert.alert('Please enter email to continue');
+    } else if (!isValid){
+      return Alert.alert('Please enter a valid email id');
+    } else {
+      navigation.navigate('Verification');
+    }
   };
 
   return (
@@ -57,7 +68,12 @@ const Register = () => {
               <TextInput
                 placeholder="Enter Email"
                 style={styles.inputText}
+                autoCapitalize='none'
                 placeholderTextColor={Colors.lightgray}
+                onChangeText={(value) => {
+                  setValue(value);
+                  setValid(value.match(regex));
+                }}
               />
             </View>
           </View>
@@ -138,7 +154,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: '2%',
-    height: Dimensions.get('screen').height > 700 ? Dimensions.get('screen').height * 0.06 : Dimensions.get('screen').height * 0.07,
+    height:
+      Dimensions.get('screen').height > 700
+        ? Dimensions.get('screen').height * 0.06
+        : Dimensions.get('screen').height * 0.07,
   },
   inputBox: {
     flexDirection: 'row',
