@@ -22,6 +22,7 @@ import FinalVerification from '../screens/FinalVerificaiton';
 import PropertyDescription from '../screens/PropertyDescription';
 import UploadImage from '../screens/UploadImages';
 import TopTabNavigation from './TopTabNavigation';
+import Location from '../screens/Location';
 const Stack = createStackNavigator();
 const StackNavigation = () => {
   return (
@@ -47,6 +48,7 @@ const StackNavigation = () => {
           <Stack.Screen name="PropertyDescription" component={PropertyDescription} />
           <Stack.Screen name="UploadImage" component={UploadImage} />
           <Stack.Screen name="TopTabNavigation" component={TopTabNavigation} />
+          <Stack.Screen name="Location" component={Location} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaView>
