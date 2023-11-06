@@ -26,7 +26,7 @@ const SetLocation = ({navigation}: any) => {
       <TouchableOpacity
         style={styles.bt1}
         onPress={() => {
-          navigation.navigate('BasicInformation');
+          navigation.navigate('Location');
         }}>
         <Text>Enter Manually</Text>
       </TouchableOpacity>

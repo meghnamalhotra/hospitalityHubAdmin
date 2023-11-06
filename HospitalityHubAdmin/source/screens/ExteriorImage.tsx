@@ -24,6 +24,7 @@ const ExteriorImage = () => {
       const name = await AsyncStorage.getItem('DATA')
       console.log('get data.',JSON.parse(name))
       setCheck(name)
+      // console.log(check)
     } catch(e) {
       // read error
     }
