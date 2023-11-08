@@ -1,14 +1,17 @@
-import React, { useState } from 'react';
-import {PermissionsAndroid, Text, View} from 'react-native';
+import React, {useState} from 'react';
+import { Platform, Text, View} from 'react-native';
 import {StyleSheet} from 'react-native';
 import Geolocation from 'react-native-geolocation-service';
-import { Button } from '../components';
+import {Button} from '../components';
+import { PERMISSIONS, request } from 'react-native-permissions';
 // Function to get permission for location
 const requestLocationPermission = async () => {
   try {
-    const granted = await PermissionsAndroid.request(
-      PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
-      
+    const granted = await request(
+      Platform.OS === 'ios'
+        ? PERMISSIONS.IOS.LOCATION_ALWAYS
+        : PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION,
+
       {
         title: 'Geolocation Permission',
         message: 'Can we access your location?',
@@ -16,7 +19,7 @@ const requestLocationPermission = async () => {
         buttonNegative: 'Cancel',
         buttonPositive: 'OK',
       },
-    )
+    );
     console.log('granted', granted);
     if (granted === 'granted') {
       console.log('You can use Geolocation');
@@ -28,8 +31,7 @@ const requestLocationPermission = async () => {
   } catch (err) {
     return false;
   }
-  }
-
+};
 const Location = () => {
   // state to hold location
   const [location, setLocation] = useState(false);
@@ -56,9 +58,10 @@ const Location = () => {
     console.log(location);
   };
   return (
+
     <View style={styles.container}>
       <Text>Welcome!</Text>
-      <Button title="Get Location" onPress={getLocation}/>
+      <Button title="Get Location" onPress={getLocation} />
       <Text>Latitude: {location ? location.coords.latitude : null}</Text>
       <Text>Longitude: {location ? location.coords.longitude : null}</Text>
     </View>
@@ -72,4 +75,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-export default Location
+export default Location;
