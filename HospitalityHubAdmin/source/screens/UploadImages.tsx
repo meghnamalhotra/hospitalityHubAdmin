@@ -3,7 +3,6 @@ import {
   SafeAreaView,
   View,
   FlatList,
-  ScrollView,
   StyleSheet,
 } from 'react-native';
 import {Button} from '../components';
@@ -37,18 +36,7 @@ const DATA = [
     id: 7,
     image: <Interior />,
   },
-  {
-    id: 8,
-    image: <Interior />,
-  },
-  {
-    id: 9,
-    image: <Interior />,
-  },
-  {
-    id: 10,
-    image: <Interior />,
-  },
+  
 ];
 
 const UploadImage = ({navigation}: any) => {
@@ -57,8 +45,9 @@ const UploadImage = ({navigation}: any) => {
   };
   return (
     <SafeAreaView>
-      <ScrollView>
+
         <View style={styles.container}>
+        <Button title="Upload Image" onPress={handlePress} />
           <FlatList
             data={DATA}
             numColumns={2}
@@ -69,15 +58,14 @@ const UploadImage = ({navigation}: any) => {
               </View>
             )}
           />
-          <Button title="Upload Image" onPress={handlePress} />
+         
         </View>
-      </ScrollView>
+
     </SafeAreaView>
   );
 };
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     marginHorizontal: 35,
   },
   irender: {
