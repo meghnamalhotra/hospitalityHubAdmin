@@ -2,6 +2,7 @@ import React from "react";
 import { Text, View, StyleSheet, TextInput, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Colors } from "../theme/colors";
+import { Button } from "../components";
 
 const RoomDescription=({navigation}: any)=>{
   const handlePress = () => {
@@ -22,11 +23,9 @@ const RoomDescription=({navigation}: any)=>{
         style={styles.input}
         placeholder="Number of Extra Child Allowed"
         />
-      <TouchableOpacity
-        style={styles.bt}
-        onPress={handlePress}>
-        <Text style={styles.btn}>Next</Text>
-      </TouchableOpacity>
+        <View style={styles.buttonContainer}>
+            <Button title={'DONE'} onPress={handlePress} />
+          </View>
     </SafeAreaView>
     )
 }
@@ -78,8 +77,15 @@ const styles = StyleSheet.create({
         elevation: 5,
         activeOpacity: 0.7,
       },
-  btn: {
-        color: Colors.white,
-      },
+    btn: {
+          color: Colors.white,
+        },
+    buttonContainer: {
+      marginTop: '60%',
+      marginLeft: 21,
+      width: '90%',
+      backgroundColor: Colors.buttonBlue,
+      borderRadius: 7,
+    },
 })
 export default RoomDescription;
