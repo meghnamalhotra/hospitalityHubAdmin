@@ -5,8 +5,8 @@ import { Colors } from "../theme/colors";
 
 const BasicInformation=({navigation}: any)=>{
     return(
-    <SafeAreaView style={styles.container}>
-        
+      
+    <SafeAreaView style={styles.container}>     
         <Text style={styles.txt}>Basic Information</Text>
         <TextInput
         style={styles.input}
