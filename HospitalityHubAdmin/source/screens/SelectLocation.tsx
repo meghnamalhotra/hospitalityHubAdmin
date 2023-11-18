@@ -6,7 +6,11 @@ import {StyleSheet} from 'react-native';
 import {Colors} from '../theme/colors';
 import {LocationIcon} from '../assets/svgs';
 import { Search } from '../assets/svgs';
+import { Button } from '../components';
 const SelectLocation = ({navigation}: any) => {
+  const handlePress = () => {
+    navigation.navigate('Amenities');
+  };
   return (
     <SafeAreaView style={styles.container}>
        <TextInput style={styles.input}
@@ -34,13 +38,9 @@ const SelectLocation = ({navigation}: any) => {
         style={styles.input}
         placeholder="Number of Extra Child Allowed"
         />
-       <TouchableOpacity
-        style={styles.bt}
-        onPress={() => {
-          navigation.navigate('Amenities');
-        }}>
-        <Text style={styles.btn}>Allow Location</Text>
-       </TouchableOpacity>
+        <View style={styles.buttonContainer}>
+            <Button title={'DONE'} onPress={handlePress} />
+          </View>
     </SafeAreaView>
   );
 };
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.white,
     },
   icon: {
-    marginTop: '-15%',
+    marginTop: '-15.6%',
     marginLeft: '8%',
   },
   middle:{
@@ -113,7 +113,14 @@ const styles = StyleSheet.create({
   btn:{
     color: Colors.white,
     fontSize: 17,
-  }
+  },
+  buttonContainer: {
+    marginTop: 28,
+    marginLeft: 21,
+    width: '90%',
+    backgroundColor: Colors.buttonBlue,
+    borderRadius: 7,
+  },
  
 });
 export default SelectLocation;

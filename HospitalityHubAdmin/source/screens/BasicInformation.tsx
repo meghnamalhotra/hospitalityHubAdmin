@@ -2,8 +2,12 @@ import React from "react";
 import { Text, View, StyleSheet, TextInput, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Colors } from "../theme/colors";
+import { Button } from "../components";
 
 const BasicInformation=({navigation}: any)=>{
+  const handlePress = () => {
+    navigation.navigate('SetLocation');
+  };
     return(
       
     <SafeAreaView style={styles.container}>     
@@ -26,13 +30,9 @@ const BasicInformation=({navigation}: any)=>{
         style={styles.input}
         placeholder="Email Address"
         />
-          <TouchableOpacity
-        style={styles.bt}
-        onPress={() => {
-          navigation.navigate('SetLocation');
-        }}>
-        <Text style={styles.btn}>Next</Text>
-      </TouchableOpacity>
+        <View style={styles.buttonContainer}>
+            <Button title={'DONE'} onPress={handlePress} />
+          </View>
     </SafeAreaView>
     )
 }
@@ -100,6 +100,13 @@ const styles = StyleSheet.create({
       },
     btn: {
         color: Colors.white,
+      },
+      buttonContainer: {
+        marginTop: 48,
+        marginLeft: 21,
+        width: '90%',
+        backgroundColor: Colors.buttonBlue,
+        borderRadius: 7,
       },
 })
 export default BasicInformation;
