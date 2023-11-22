@@ -12,10 +12,13 @@ import {
   Platform,
 } from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import { HotelView, FbSVG, GoogleSVG } from '../assets/svgs';
-import { Colors } from '../theme/colors';
-import { Separator, Button} from '../components';
-
+import {HotelView, FbSVG, GoogleSVG} from '../assets/svgs';
+import {Colors} from '../theme/colors';
+import {Separator, Button} from '../components';
+import {
+  GoogleSignin,
+  statusCodes,
+} from '@react-native-google-signin/google-signin';
 const Register = () => {
   const navigation = useNavigation<any>();
   const handlePress = () => {
@@ -79,7 +82,31 @@ const Register = () => {
           </View>
 
           <View style={styles.socialContainer}>
-            <TouchableOpacity style={styles.socialButton}>
+            <TouchableOpacity
+              style={styles.socialButton}
+              onPress={() => {
+                GoogleSignin.configure({
+                  androidClientId:
+                    '271773652755-nm71fh26hapkoo9hcdlrbjd5edsndi69.apps.googleusercontent.com',
+                  iosClientId:
+                    '271773652755-v4kjotnrubln8v6j2qo3e63amg48eg86.apps.googleusercontent.com',
+                });
+                GoogleSignin.hasPlayServices()
+                  .then(hasPlayService => {
+                    if (hasPlayService) {
+                      GoogleSignin.signIn()
+                        .then(userInfo => {
+                          console.log(JSON.stringify(userInfo));
+                        })
+                        .catch(e => {
+                          console.log('ERROR IS: ' + JSON.stringify(e));
+                        });
+                    }
+                  })
+                  .catch(e => {
+                    console.log('ERROR IS: ' + JSON.stringify(e));
+                  });
+              }}>
               <GoogleSVG />
             </TouchableOpacity>
             <TouchableOpacity style={styles.socialButton}>
@@ -138,7 +165,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     marginVertical: '2%',
-    height: Dimensions.get('screen').height > 700 ? Dimensions.get('screen').height * 0.06 : Dimensions.get('screen').height * 0.07,
+    height:
+      Dimensions.get('screen').height > 700
+        ? Dimensions.get('screen').height * 0.06
+        : Dimensions.get('screen').height * 0.07,
   },
   inputBox: {
     flexDirection: 'row',
