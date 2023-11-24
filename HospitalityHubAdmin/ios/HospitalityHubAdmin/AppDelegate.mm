@@ -4,6 +4,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit-Swift.h> 
 #import <React/RCTLinkingManager.h> 
 #import <React/RCTBundleURLProvider.h>
+#import <GoogleSignIn/GIDSignIn.h>
 
 @implementation AppDelegate
 
