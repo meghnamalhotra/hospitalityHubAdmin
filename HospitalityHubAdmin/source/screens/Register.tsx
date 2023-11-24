@@ -15,7 +15,10 @@ import {useNavigation} from '@react-navigation/native';
 import {HotelView, FbSVG, GoogleSVG} from '../assets/svgs';
 import {Colors} from '../theme/colors';
 import {Separator, Button} from '../components';
-import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import {
+  GoogleSignin,
+  statusCodes,
+} from '@react-native-google-signin/google-signin';
 import {LoginManager} from 'react-native-fbsdk-next';
 const Register = () => {
   const navigation = useNavigation<any>();
@@ -88,10 +91,8 @@ const Register = () => {
               style={styles.socialButton}
               onPress={() => {
                 GoogleSignin.configure({
-                  androidClientId:
-                    '271773652755-nm71fh26hapkoo9hcdlrbjd5edsndi69.apps.googleusercontent.com',
                   iosClientId:
-                    '271773652755-v4kjotnrubln8v6j2qo3e63amg48eg86.apps.googleusercontent.com',
+                    '893241661192-l968o5pbb7ktdlu7f89jgoqddceqm7pp.apps.googleusercontent.com',
                 });
                 GoogleSignin.hasPlayServices()
                   .then(hasPlayService => {
@@ -129,7 +130,7 @@ const Register = () => {
                       alert('Login Success ' + result.toString());
                     }
                   },
-                  function (error) {
+                  function (error) {``
                     alert('Login failed with error: ' + error);
                   },
                 );

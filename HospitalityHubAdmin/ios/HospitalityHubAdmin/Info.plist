@@ -27,12 +27,18 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.271773652755-v4kjotnrubln8v6j2qo3e63amg48eg86</string>
+				<string>com.googleusercontent.apps.893241661192-l968o5pbb7ktdlu7f89jgoqddceqm7pp</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>FacebookAppID</key>
+	<string>6887929871294640</string>
+	<key>FacebookClientToken</key>
+	<string>c4650d89a11108ce1235adbd3399068b</string>
+	<key>FacebookDisplayName</key>
+	<string>Hospitality hub</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -88,20 +94,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<key>CFBundleURLTypes</key>
-	<array>
-	<dict>
-	<key>CFBundleURLSchemes</key>
-	<array>
-		<string>fb6887929871294640</string>
-	</array>
-	</dict>
-	</array>
-	<key>FacebookAppID</key>
-	<string>6887929871294640</string>
-	<key>FacebookClientToken</key>
-	<string>c4650d89a11108ce1235adbd3399068b</string>
-	<key>FacebookDisplayName</key>
-	<string>Hospitality hub</string>
 </dict>
 </plist>
