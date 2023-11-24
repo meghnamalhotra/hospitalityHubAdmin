@@ -15,15 +15,17 @@ import {useNavigation} from '@react-navigation/native';
 import {HotelView, FbSVG, GoogleSVG} from '../assets/svgs';
 import {Colors} from '../theme/colors';
 import {Separator, Button} from '../components';
-import {
-  GoogleSignin,
-  statusCodes,
-} from '@react-native-google-signin/google-signin';
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import {LoginManager} from 'react-native-fbsdk-next';
 const Register = () => {
   const navigation = useNavigation<any>();
   const handlePress = () => {
     navigation.navigate('Verification');
   };
+
+  function alert(arg0: string) {
+    throw new Error('Function not implemented.');
+  }
 
   return (
     <KeyboardAvoidingView
@@ -109,7 +111,29 @@ const Register = () => {
               }}>
               <GoogleSVG />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.socialButton}>
+            <TouchableOpacity
+              style={styles.socialButton}
+              onPress={() => {
+                LoginManager.logInWithPermissions([
+                  'public_profile',
+                  'email',
+                ]).then(
+                  function (result) {
+                    if (result.isCancelled) {
+                      alert('Login Cancelled ' + JSON.stringify(result));
+                    } else {
+                      alert(
+                        'Login success with  permisssions: ' +
+                          result.grantedPermissions.toString(),
+                      );
+                      alert('Login Success ' + result.toString());
+                    }
+                  },
+                  function (error) {
+                    alert('Login failed with error: ' + error);
+                  },
+                );
+              }}>
               <FbSVG />
             </TouchableOpacity>
           </View>
